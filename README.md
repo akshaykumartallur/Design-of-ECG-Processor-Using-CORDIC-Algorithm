@@ -83,15 +83,15 @@
 
 
   <h2>14 November 2025</h2>
-  <p><strong>Work Summary:</strong> Core SystemVerilog design files were finalized and integrated. Testbenches were written for unit testing. We processed sample ECG records and generated output BPM values for verification. Early performance data was recorded.</p>
-  <p><strong>Hours Worked:</strong> ~30 hours</p>
-  <p><strong>Learnings:</strong> Testbench creation and waveform tracing, BPM computation logic and corner-case handling, Role of thresholds in peak detection</p>
-  <p><strong>Blockers/Risks:</strong> Inconsistent simulation outputs with noisy data, Difficulty in handling large sample inputs</p>
+  <p><strong>Work Summary:</strong>We introduced RR interval measurement and converted it into BPM calculation. The classification module was added to detect rhythm categories such as normal, bradycardia, and tachycardia. We validated BPM output using multiple patient records.</p>
+  <p><strong>Hours Worked:</strong> 13 hours</p>
+  <p><strong>Learnings:</strong>RR intervals proved to be an elegant way to estimate heart rate without relying on continuous filtering. We learned how to label and map BPM values to probable heart conditions.</p>
+  <p><strong>Blockers/Risks:</strong>We had to debug timing alignment between peaks and BPM calculation. Handling missing or irregular peaks required careful exception logic.</p>
 
 
   <h2>5 December 2025</h2>
-  <p><strong>Work Summary:</strong> A robust simulation environment was built using actual MIT-BIH samples. We analyzed performance for both normal and diseased records. The conclusion logic (Normal/Bradycardia/Tachycardia) was added to the testbench.</p>
-  <p><strong>Hours Worked:</strong> ~25 hours</p>
-  <p><strong>Learnings:</strong> Heart rate thresholds and clinical norms, Variability in diseased records, Timing synchronization in testbench</p>
-  <p><strong>Blockers/Risks:</strong> Slow simulation for large datasets, Potential accuracy drop for edge cases</p>
+  <p><strong>Work Summary:</strong>We expanded the testbench for bulk testing across datasets like record 100 and 200. A final output block was added to display summary results: average BPM and detected condition (e.g., normal or bradycardia). Output was cleaned for readability.</p>
+  <p><strong>Hours Worked:</strong> 8 hours</p>
+  <p><strong>Learnings:</strong>Summarizing results at the end of the simulation gave us a clear understanding of performance over long data windows. We also learned how to trace BPM trends across time.</p>
+  <p><strong>Blockers/Risks:</strong>Managing long simulations with large files tested our patience and system stability. Keeping waveform display aligned with final outputs was another challenge.</p>
 
