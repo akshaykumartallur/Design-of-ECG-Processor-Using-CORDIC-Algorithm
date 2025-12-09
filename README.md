@@ -1,4 +1,4 @@
-<h1>CORDIC-Based Low-Power ECG Processor for Arrhythmia Detection</h1>
+<h1>Design of ECG processor using CORDIC Algorithm</h1>
 
   <h2>Overview</h2>
   <p>
