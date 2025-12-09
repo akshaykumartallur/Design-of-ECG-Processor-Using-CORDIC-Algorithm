@@ -55,44 +55,43 @@
 
   <h1>Project Diary</h1>
   <p><strong>Project Title:</strong>Design of ECG Processor Using CORDIC Algorithm</p>
-  <p><strong>Team Members:</strong> Abhay Surya Shankar, Akshaykumar Tallur, Bhavya Y, Deepthi S R</p>
   <p><strong>Guide:</strong> Dr. Vimala P</p>
+  <p><strong>Team Members:</strong> Abhay Surya Shankar, Akshaykumar Tallur, Bhavya Y, Deepthi S R</p>
 
 
   <hr>
 
-  <h2>August 2025</h2>
-  <p><strong>Work Summary:</strong> We began the project by finalizing our topic after evaluating several options under the bio-medical signal processing domain. Once we chose the CORDIC-based ECG processor, we researched its relevance and feasibility. Team responsibilities were distributed, and a preliminary timeline was created.</p>
-  <p><strong>Hours Worked:</strong> ~15 hours</p>
-  <p><strong>Learnings:</strong> Basics of ECG waveform (PQRST) and its diagnostic significance, Introduction to CORDIC algorithm and its role in low-power computing</p>
-  <p><strong>Blockers/Risks:</strong> Lack of familiarity with ECG data handling, Uncertainty around simulation complexity</p>
-  <p><strong>Skills Acquired:</strong> Literature review, Team coordination, Time-bound planning</p>
+  <h2>23 August 2025</h2>
+  <p><strong>Work Summary:</strong> We officially kicked off the project by selecting our topic: building an ECG processor using the CORDIC algorithm. Our team met regularly to divide initial responsibilities, explore previous ECG-related work, and gather relevant papers. We also became familiar with the MIT-BIH database and set up our development environment using Vivado.</p>
+  <p><strong>Hours Worked:</strong> 7 hours</p>
+  <p><strong>Learnings:</strong>We learned the significance of QRS complexes in ECGs and how digital signal processing plays a key role in heart rhythm analysis. We also got our first exposure to the CORDIC method and how it's used to simplify mathematical computations.</p>
+  <p><strong>Blockers/Risks:</strong>Understanding the raw ECG data format from MIT-BIH took some time. We also spent effort figuring out a clean project structure and data visualization tools.</p>
 
-  <h2>September 2025</h2>
-  <p><strong>Work Summary:</strong> This month was focused on deep literature exploration. We studied the Pan-Tompkins algorithm, existing FPGA-based ECG processors, and reviewed MIT-BIH Arrhythmia data formats. We also began understanding SystemVerilog for digital design.</p>
-  <p><strong>Hours Worked:</strong> ~22 hours</p>
-  <p><strong>Learnings:</strong> FPGA architecture basics, MIT-BIH database annotation formats, Difference between DSP and CORDIC computation techniques</p>
-  <p><strong>Blockers/Risks:</strong> Interpreting annotated ECG files, Complexity of QRS detection logic</p>
-  <p><strong>Skills Acquired:</strong> Technical documentation extraction, HDL design fundamentals, Collaborative research</p>
 
-  <h2>October 2025</h2>
-  <p><strong>Work Summary:</strong> We initiated module-level design for the ECG signal processor. A pipeline was planned with core stages: data input, R-peak detection, RR interval calculation, and BPM classification. CORDIC implementation was prototyped.</p>
-  <p><strong>Hours Worked:</strong> ~28 hours</p>
-  <p><strong>Learnings:</strong> Shift-add operations in CORDIC, RTL structure and pipeline planning, FIFO buffer modeling for sample streaming</p>
-  <p><strong>Blockers/Risks:</strong> Simulation misbehavior due to time delays, No standard testbench pattern initially</p>
-  <p><strong>Skills Acquired:</strong> Modular RTL coding, Simulation with test vectors, Debugging procedural logic</p>
+  <h2>20 September 2025</h2>
+  <p><strong>Work Summary:</strong>we modeled basic signal processing blocks using verilog. We focused on implementing the CORDIC-based magnitude computation unit in vectoring mode. We also developed a five-point derivative module to emphasize slope changes and started creating a testbench with real ECG samples.</p>
+  <p><strong>Hours Worked:</strong> 13 hours</p>
+  <p><strong>Learnings:</strong>We understood how bit-shifting and iterative vector rotations could replace complex multipliers. Working on the derivative operator helped us detect slope shifts related to the QRS complex.</p>
+  <p><strong>Blockers/Risks:</strong>Verifying the CORDIC block for accurate magnitude under various edge cases needed time. Also, setting correct data widths to avoid overflow or underflow was a learning curve.</p>
+ 
 
-  <h2>November 2025</h2>
+  <h2>15 October 2025</h2>
+  <p><strong>Work Summary:</strong>We integrated the CORDIC and derivative modules and added a moving window integrator to smooth out outputs. A custom peak detection logic with adaptive thresholding was created. We also started verifying R-peak timing from MIT-BIH input.</p>
+  <p><strong>Hours Worked:</strong> 7 hours</p>
+  <p><strong>Learnings:</strong>We explored threshold tuning to adapt dynamically to real ECG signals. Building state machines for peak detection gave us better control over how beats are identified accurately without needing filters.</p>
+  <p><strong>Blockers/Risks:</strong>Some false positives occurred when peaks were too close. Tuning the refractory period and window size helped improve detection.</p>
+
+
+  <h2>14 November 2025</h2>
   <p><strong>Work Summary:</strong> Core SystemVerilog design files were finalized and integrated. Testbenches were written for unit testing. We processed sample ECG records and generated output BPM values for verification. Early performance data was recorded.</p>
   <p><strong>Hours Worked:</strong> ~30 hours</p>
   <p><strong>Learnings:</strong> Testbench creation and waveform tracing, BPM computation logic and corner-case handling, Role of thresholds in peak detection</p>
   <p><strong>Blockers/Risks:</strong> Inconsistent simulation outputs with noisy data, Difficulty in handling large sample inputs</p>
-  <p><strong>Skills Acquired:</strong> Functional simulation in Vivado, Handling real-world datasets, Analytical result interpretation</p>
 
-  <h2>December 2025</h2>
+
+  <h2>5 December 2025</h2>
   <p><strong>Work Summary:</strong> A robust simulation environment was built using actual MIT-BIH samples. We analyzed performance for both normal and diseased records. The conclusion logic (Normal/Bradycardia/Tachycardia) was added to the testbench.</p>
   <p><strong>Hours Worked:</strong> ~25 hours</p>
   <p><strong>Learnings:</strong> Heart rate thresholds and clinical norms, Variability in diseased records, Timing synchronization in testbench</p>
   <p><strong>Blockers/Risks:</strong> Slow simulation for large datasets, Potential accuracy drop for edge cases</p>
-  <p><strong>Skills Acquired:</strong> Data-driven testing, Diagnostic classification logic, Simulation automation</p>
 
